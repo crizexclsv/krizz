@@ -1,0 +1,107 @@
+/* =========================
+   BASE (DESKTOP)
+========================= */
+.container {
+    display: flex;
+    padding: 0 50px;
+}
+
+/* =========================
+   TABLET (≤ 900px)
+========================= */
+@media (max-width: 900px) {
+    .container {
+        padding: 40px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 140px;
+        height: 190px;
+        margin-left: -30px;
+    }
+
+    .modal-card {
+        width: 320px;
+        height: 480px;
+    }
+}
+
+/* =========================
+   MOBILE (≤ 600px)
+========================= */
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    /* KEEP CARD INTERACTION SAFE */
+    .card {
+        width: 150px;        /* original card feel */
+        height: 200px;
+        margin-left: 0;
+        filter: blur(0);
+    }
+
+    /* disable hover lift only (flip unaffected) */
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* =========================
+   SMALL MOBILE (≤ 480px)
+========================= */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .modal-card {
+        width: 280px;
+        height: 420px;
+    }
+
+    #closeBtn {
+        padding: 8px 16px;
+        width: 40%;
+    }
+}
+
+/* =========================
+   EXTRA SMALL (≤ 360px)
+========================= */
+@media (max-width: 360px) {
+    .container {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .modal-card {
+        width: 250px;
+        height: 380px;
+    }
+
+    .modal-back {
+        padding: 15px;
+    }
+
+    #modalTitle {
+        font-size: 18px;
+    }
+
+    #closeBtn {
+        padding: 6px 12px;
+        width: 50%;
+        font-size: 14px;
+    }
+}

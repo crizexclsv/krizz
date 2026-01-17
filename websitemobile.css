@@ -1,0 +1,93 @@
+@media (max-width: 768px) {
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    margin-top: 90px;
+    height: auto;
+    overflow-y: visible;
+    scroll-snap-type: none;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+/* SMALL VER. */
+
+@media (max-width: 428px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+/* EXTRA SMALL VER. */
+
+@media (max-width: 375px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 250px;
+  }
+}

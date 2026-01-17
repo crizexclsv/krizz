@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEBSITE NI CZARINA</title>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-image: url('bg.jpg');
+        font-family: Arial, sans-serif;
+    }
+
+    .container{
+        background-color: #FAEBD7; 
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 1s ease; 
+        width: 350px; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .container.expanded{
+        width: 550px;
+        height: auto;
+    }
+    
+    h1{
+        color: #ff4d6d;
+        text-shadow: 2px 2px 2px black;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+    }
+
+    h1:hover{
+        color: #ff1a3c;
+        transform: scale(1.1);
+    }
+
+    .button{
+        background-color: #DC143C;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 1s ease;
+        margin-bottom: 20px;
+    }
+
+    .button.hidden{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .image{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .image.fade-in{
+        opacity: 1;
+    }
+
+    .centered-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    a{
+        color: #DC143C;
+        text-decoration: none;
+    }
+
+    a:hover{
+        text-decoration: underline;
+        color: #FF4500; 
+    }   
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>HAPPY BIRTHDAY!!!</h1>
+    <button class="button" onclick="expandContainer(this)">Click me!</button>
+    <div class="centered-content">
+        <img class="image" src="bg.jpg" alt="Birthday Image">
+        <p>💛!</p>
+        <p>daddwwd</p>
+        <p>dadadd</p>
+        <p>ddadwdwd</p>
+        <p>dadawdawd</p>
+        <h3><a href="https://www.example.com">Please click</a></h3>
+    </div>
+</div>
+
+<script>
+function expandContainer(button) {
+    const container = button.parentElement;
+    container.classList.toggle("expanded");
+    button.classList.add("hidden");
+    const image = container.querySelector('.image');
+    if (image) {
+        image.classList.add('fade-in');
+    }    
+}
+</script>
+</body>
+</html>
